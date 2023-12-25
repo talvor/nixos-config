@@ -78,10 +78,6 @@
     };
   };
 
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
-
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
   services.openssh = {
@@ -95,13 +91,7 @@
   };
 
   services.dbus.enable = true;
-
-  programs.git.enable = true;
-  programs.hyprland = {    
-    enable = true;    
-    xwayland.enable = true;  
-  }; 
-
+  
   security.pam.services.swaylock = {};
 
   #Garbage colector
