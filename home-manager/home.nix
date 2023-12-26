@@ -9,6 +9,7 @@
   imports = [
     # hyprland.homeManagerModules.default
     ./programs
+    ./scripts
   ];
 
   nixpkgs = {

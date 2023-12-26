@@ -3,10 +3,10 @@
     # ./alacritty
     ./dunst
     ./hyprland
-    # ./kitty
+    ./kitty
     # ./neovim
     ./rofi
     ./waybar
-    # ./zsh
+    ./zsh
   ];
 }
