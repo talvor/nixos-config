@@ -36,6 +36,10 @@
     vscode
   ];
 
+  home.file."${config.home.homeDirectory}/Pictures/wallpaper" = {
+    source = ./wallpaper;
+    recursive = true;
+  };
   programs.home-manager.enable = true;
   programs.git.enable = true;
 

@@ -16,12 +16,12 @@ rofi \
   wallpaper_random = pkgs.writeShellScriptBin "wallpaper_random" ''
     if command -v swww >/dev/null 2>&1; then 
         killall dynamic_wallpaper
-        swww img $(find ~/Imagens/wallpapers/. -name "*.png" | shuf -n1) --transition-type simple
+        swww img $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) --transition-type simple
     fi
   '';
   default_wall = pkgs.writeShellScriptBin "default_wall" ''
     if command -v swww >/dev/null 2>&1; then 
-          swww img ~/Imagens/wallpapers/nixos_dark.png  --transition-type simple
+          swww img ~/Pictures/wallpaper/nixos_dark.png  --transition-type simple
     fi
   '';
 
@@ -140,4 +140,5 @@ in
     powermenu
 	lockscreen
   ];
+
 }
