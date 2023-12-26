@@ -3,9 +3,12 @@
   lib,
   config,
   pkgs,
+  hyprland,
   ...
 }: {
   imports = [
+    # hyprland.homeManagerModules.default
+    ./programs
   ];
 
   nixpkgs = {
