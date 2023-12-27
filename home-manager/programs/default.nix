@@ -1,10 +1,9 @@
 {
   imports = [
-    # ./alacritty
     ./dunst
     ./hyprland
     ./kitty
-    # ./neovim
+    ./neovim
     ./rofi
     ./waybar
     ./zsh
