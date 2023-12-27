@@ -4,8 +4,8 @@
     programs.neovim = {
         enable = true;
         extraLuaConfig = ''
-            ${builtins.readFile config/mappings.lua}
             ${builtins.readFile config/options.lua}
+            ${builtins.readFile config/mappings.lua}
         '';
         plugins = [
             ## Theme
@@ -35,7 +35,16 @@
                 '';
             }
             pkgs.vimPlugins.nvim-web-devicons
-
+            ## Which-Key
+            {
+                plugin = pkgs.vimPlugins.which-key-nvim;
+                type = "lua";
+                config = ''
+                    vim.o.timeout = true
+                    vim.o.timeoutlen = 300
+                    require("which-key").setup {}
+                '';
+            }
             ## Treesitter
             {
                 plugin = pkgs.vimPlugins.nvim-treesitter;
@@ -44,6 +53,19 @@
             }
             pkgs.vimPlugins.nvim-treesitter.withAllGrammars
             pkgs.vimPlugins.nvim-treesitter-textobjects
+
+            ## Telescope
+            {
+            plugin = pkgs.vimPlugins.telescope-nvim;
+            config = builtins.readFile config/setup/telescope.lua;
+            type = "lua";
+            }
+            pkgs.vimPlugins.telescope-fzf-native-nvim
+            pkgs.vimPlugins.harpoon
         ];
     };
+
+    home.packages = with pkgs; [
+        ripgrep
+    ];
 }
