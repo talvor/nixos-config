@@ -16,6 +16,7 @@
     slurp
     wl-clipboard
     pamixer
+    light
   ];
     
   #test later systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -130,8 +131,6 @@
     $mainMod = SUPER
     bind = $mainMod, G, fullscreen,
 
-
-    #bind = $mainMod, RETURN, exec, cool-retro-term-zsh
     bind = $mainMod, RETURN, exec, kitty
     bind = $mainMod, B, exec, brave
     bind = $mainMod, Q, killactive,
@@ -143,16 +142,13 @@
     bind = $mainMod, P, pseudo, # dwindle
     bind = $mainMod, J, togglesplit, # dwindle
 
-    # Switch Keyboard Layouts
-    bind = $mainMod, SPACE, exec, hyprctl switchxkblayout teclado-gamer-husky-blizzard next
-
     bind = , Print, exec, grim -g "$(slurp)" - | wl-copy
     bind = SHIFT, Print, exec, grim -g "$(slurp)"
 
     # Functional keybinds
     bind =,XF86AudioMicMute,exec,pamixer --default-source -t
-    bind =,XF86MonBrightnessDown,exec,light -U 20
-    bind =,XF86MonBrightnessUp,exec,light -A 20
+    # bind =,XF86MonBrightnessDown,exec,light -U 20
+    # bind =,XF86MonBrightnessUp,exec,light -A 20
     bind =,XF86AudioMute,exec,pamixer -t
     bind =,XF86AudioLowerVolume,exec,pamixer -d 10
     bind =,XF86AudioRaiseVolume,exec,pamixer -i 10
