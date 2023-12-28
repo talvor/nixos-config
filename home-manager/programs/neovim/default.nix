@@ -78,10 +78,15 @@
             pkgs.vimPlugins.lspkind-nvim
             pkgs.vimPlugins.luasnip
 
+            ## QoL
+            pkgs.vimPlugins.rainbow
+            pkgs.vimPlugins.surround-nvim
+            pkgs.vimPlugins.lazygit-nvim
         ];
     };
 
     home.packages = with pkgs; [
         ripgrep
+        lazygit
     ];
 }
