@@ -42,8 +42,32 @@
   };
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+    };
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+      extraEntries = ''
+        menuentry "Reboot" {
+          reboot
+        }
+        menuentry "Poweroff" {
+          halt
+        }
+      '';
+
+      darkmatter-theme = {
+        enable = true;
+        style = "nixos";
+        icon = "color";
+        resolution = "1080p";
+      };
+
+    };
+  };
 
   networking.hostName = "nixos";
 
@@ -93,6 +117,9 @@
   services.dbus.enable = true;
   
   security.pam.services.swaylock = {};
+
+  environment.systemPackages = [
+  ];
 
   #Garbage colector
   nix.gc = {

@@ -12,12 +12,19 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
     hyprland.url = "github:hyprwm/Hyprland";
+
+    darkmatter-grub-theme = {
+      url = gitlab:VandalByte/darkmatter-grub-theme;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    darkmatter-grub-theme,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -28,7 +35,10 @@
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+        modules = [
+          darkmatter-grub-theme.nixosModule
+          ./nixos/configuration.nix
+        ];
       };
     };
 
