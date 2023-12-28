@@ -82,6 +82,17 @@
             pkgs.vimPlugins.rainbow
             pkgs.vimPlugins.surround-nvim
             pkgs.vimPlugins.lazygit-nvim
+
+            {
+                plugin = pkgs.vimPlugins.comment-nvim;
+                config = "require('Comment').setup()";
+                type = "lua";
+            }
+            {
+                plugin = pkgs.vimPlugins.gitsigns-nvim;
+                config = "require('gitsigns').setup()";
+                type = "lua";
+            }
         ];
     };
 
