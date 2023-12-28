@@ -14,6 +14,7 @@
                 config = "vim.cmd[[colorscheme nordic]]";
                 type = "lua";
             }
+
             ## Lualine
             {
                 plugin = pkgs.vimPlugins.lualine-nvim;
@@ -26,6 +27,7 @@
                 '';
                 type = "lua";
             }
+            
             ## nvim-tree
             {
                 plugin = pkgs.vimPlugins.nvim-tree-lua;
@@ -35,6 +37,7 @@
                 '';
             }
             pkgs.vimPlugins.nvim-web-devicons
+            
             ## Which-Key
             {
                 plugin = pkgs.vimPlugins.which-key-nvim;
@@ -45,6 +48,7 @@
                     require("which-key").setup {}
                 '';
             }
+            
             ## Treesitter
             {
                 plugin = pkgs.vimPlugins.nvim-treesitter;
@@ -53,7 +57,6 @@
             }
             pkgs.vimPlugins.nvim-treesitter.withAllGrammars
             pkgs.vimPlugins.nvim-treesitter-textobjects
-
             pkgs.vimPlugins.plenary-nvim
 
             ## Telescope
@@ -74,7 +77,6 @@
             pkgs.vimPlugins.cmp-buffer
             pkgs.vimPlugins.cmp-cmdline
             pkgs.vimPlugins.cmp_luasnip
-
             pkgs.vimPlugins.lspkind-nvim
             pkgs.vimPlugins.luasnip
 
