@@ -54,14 +54,30 @@
             pkgs.vimPlugins.nvim-treesitter.withAllGrammars
             pkgs.vimPlugins.nvim-treesitter-textobjects
 
+            pkgs.vimPlugins.plenary-nvim
+
             ## Telescope
             {
-            plugin = pkgs.vimPlugins.telescope-nvim;
-            config = builtins.readFile config/setup/telescope.lua;
-            type = "lua";
+                plugin = pkgs.vimPlugins.telescope-nvim;
+                config = builtins.readFile config/setup/telescope.lua;
+                type = "lua";
             }
             pkgs.vimPlugins.telescope-fzf-native-nvim
-            pkgs.vimPlugins.harpoon
+
+            ## cmp
+            {
+                plugin = pkgs.vimPlugins.nvim-cmp;
+                config = builtins.readFile config/setup/cmp.lua;
+                type = "lua";
+            }
+            pkgs.vimPlugins.cmp-nvim-lsp
+            pkgs.vimPlugins.cmp-buffer
+            pkgs.vimPlugins.cmp-cmdline
+            pkgs.vimPlugins.cmp_luasnip
+
+            pkgs.vimPlugins.lspkind-nvim
+            pkgs.vimPlugins.luasnip
+
         ];
     };
 
