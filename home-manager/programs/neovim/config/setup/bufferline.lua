@@ -33,7 +33,7 @@ bufferline.setup {
             max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
             truncate_names = true, -- whether or not tab names should be truncated
             tab_size = 18,
-            diagnostics = false, --| "nvim_lsp" | "coc",
+            diagnostics = "nvim_lsp", --| "nvim_lsp" | "coc",
             diagnostics_update_in_insert = false,
             -- The diagnostics indicator can be set to nil to keep the buffer name highlight but delete the highlighting
             diagnostics_indicator = function(count, level, diagnostics_dict, context)
@@ -88,7 +88,7 @@ bufferline.setup {
             move_wraps_at_ends = false, -- whether or not the move command "wraps" at the first or last position
             -- can also be a table containing 2 custom separators
             -- [focused and unfocused]. eg: { '|', '|' }
-            separator_style = "slant", -- | "slope" | "thick" | "thin" | { 'any', 'any' },
+            separator_style = "slope", -- "slant" | "slope" | "thick" | "thin" | { 'any', 'any' },
             enforce_regular_tabs = false, -- | true,
             always_show_bufferline = true, -- | false,
             hover = {

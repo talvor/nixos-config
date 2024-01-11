@@ -35,9 +35,7 @@
             {
                 plugin = pkgs.vimPlugins.nvim-tree-lua;
                 type = "lua";
-                config = ''
-                    require("nvim-tree").setup()
-                '';
+                config = builtins.readFile config/setup/nvim-tree.lua;
             }
             pkgs.vimPlugins.nvim-web-devicons
             
