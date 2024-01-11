@@ -18,13 +18,7 @@
             ## Lualine
             {
                 plugin = pkgs.vimPlugins.lualine-nvim;
-                config = ''
-                    require('lualine').setup {
-                        options = {
-                            theme = 'nord',
-                        }
-                    }
-                '';
+                config = builtins.readFile config/setup/lualine.lua;
                 type = "lua";
             }
             
