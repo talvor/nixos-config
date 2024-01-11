@@ -22,6 +22,13 @@
                 type = "lua";
             }
             
+            ## bufferline
+            {
+                plugin = pkgs.vimPlugins.bufferline-nvim;
+                config = builtins.readFile config/setup/bufferline.lua;
+                type = "lua";
+            }
+
             ## nvim-tree
             {
                 plugin = pkgs.vimPlugins.nvim-tree-lua;
