@@ -8,6 +8,8 @@
             ${builtins.readFile config/mappings.lua}
         '';
         plugins = [
+            pkgs.vimPlugins.LazyVim
+            
             ## Theme
             {
                 plugin = pkgs.vimPlugins.nordic-nvim;
@@ -24,9 +26,9 @@
             
             ## bufferline
             {
-                plugin = pkgs.vimPlugins.bufferline-nvim;
-                config = builtins.readFile config/setup/bufferline.lua;
-                type = "lua";
+              plugin = pkgs.vimPlugins.bufferline-nvim;
+              config = builtins.readFile config/setup/bufferline.lua;
+              type = "lua";
             }
 
             ## nvim-tree
