@@ -102,5 +102,8 @@
     home.packages = with pkgs; [
         ripgrep
         lazygit
+        gcc
+        ripgrep
+        fd
     ];
 }

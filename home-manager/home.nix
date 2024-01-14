@@ -30,6 +30,25 @@
   };
 
   home.packages = with pkgs; [
+    #System tools
+    stow
+    gcc
+    gnumake
+    unzip
+    wget
+    nodejs_21
+    python3
+    python311Packages.pip
+
+    #neovim tools
+    neovim
+    ripgrep
+    lazygit
+    gcc
+    ripgrep
+    fd
+    fzf
+
     #User Apps
     brave
     kitty

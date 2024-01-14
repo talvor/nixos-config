@@ -3,7 +3,7 @@
     ./dunst
     ./hyprland
     ./kitty
-    ./neovim
+    # ./neovim
     ./rofi
     ./waybar
     ./zsh
