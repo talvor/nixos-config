@@ -47,9 +47,10 @@
         canTouchEfiVariables = true;
       };
       grub = {
+        enable = true;
         efiSupport = true;
         device = "nodev";
-        #theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
+        theme = inputs.nixos-grub-themes.packages.${pkgs.system}.nixos;
       };
     };
     plymouth = {
@@ -160,8 +161,9 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
+    polarity = "dark";
+    targets.grub.enable = false;
   };  
-  stylix.polarity = “dark”
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";

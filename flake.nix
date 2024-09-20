@@ -22,6 +22,8 @@
       url = "github:nix-community/nixvim/nixos-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
   };
 
   outputs = {
