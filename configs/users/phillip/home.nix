@@ -44,13 +44,30 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [ lazygit ];
 
-  programs.alacritty.enable = true;
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      window = {
+        decorations = "None";
+        padding.x = 10;
+        padding.y = 10;
+        blur = true;
+      };
+    };
+  };
+  programs.kitty.enable = true;
   programs.vscode.enable = true;
+
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+    polarity = "dark";
+  };  
 
   stylix.fonts = {
     monospace = {
-      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
-      name = "JetBrainsMono Nerd Font Mono";
+      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono" "FiraCode"];};
+      name = "FiraCode Nerd Font Mono";
     };
     sansSerif = {
       package = pkgs.dejavu_fonts;
@@ -62,17 +79,18 @@
     };
   };
   stylix.fonts.sizes = {
-    applications = 12;
-    terminal = 15;
+    applications = 10;
+    terminal = 12;
     desktop = 10;
     popups = 10;
   };
   stylix.opacity = {
     applications = 1.0;
-    terminal = 1.0;
+    terminal = 0.9;
     desktop = 1.0;
     popups = 1.0;
   };
+  stylix.image = ../../../wallpapers/nixos-nord.png;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

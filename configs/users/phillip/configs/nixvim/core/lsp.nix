@@ -30,28 +30,28 @@
       bashls = { enable = true; };
 
       # Clojure
-      clojure-lsp = { enable = true; };
+      # clojure-lsp = { enable = true; };
 
       # Cmake
-      cmake = { enable = true; };
+      # cmake = { enable = true; };
 
       # C#
-      csharp-ls = { enable = true; };
+      # csharp-ls = { enable = true; };
 
       # CSS
-      cssls = { enable = true; };
+      # cssls = { enable = true; };
 
       # JS
       eslint = { enable = true; };
 
       # Godot Script
-      gdscript = { enable = true; };
+      # gdscript = { enable = true; };
 
       # Go
       gopls = { enable = true; };
 
       # Haskell
-      hls = { enable = true; };
+      # hls = { enable = true; };
 
       # html
       html = { enable = true; };
@@ -60,39 +60,39 @@
       jsonls = { enable = true; };
 
       # Julia
-      julials = { enable = true; };
+      # julials = { enable = true; };
 
       # Kotlin
-      kotlin-language-server = { enable = true; };
+      # kotlin-language-server = { enable = true; };
 
       # Lua
       lua-ls = { enable = true; };
 
       # PHP
-      phpactor = { enable = true; };
+      # phpactor = { enable = true; };
 
       # Python
-      pyright = { enable = true; };
+      # pyright = { enable = true; };
 
       # Rust
-      rust-analyzer = {
-        enable = true;
+      # rust-analyzer = {
+        # enable = true;
         # automatically install deps if not already
-        installCargo = true;
-        installRustc = true;
-      };
+        # installCargo = true;
+        # installRustc = true;
+      # };
 
       # Tailwind CSS
-      tailwindcss = { enable = true; };
+      # tailwindcss = { enable = true; };
 
       # LaTeX
-      texlab = { enable = true; };
+      # texlab = { enable = true; };
 
       # Typescript
       tsserver = { enable = true; };
 
       # Vue JS
-      vuels = { enable = true; };
+      # vuels = { enable = true; };
 
       # YAML
       yamlls = { enable = true; };

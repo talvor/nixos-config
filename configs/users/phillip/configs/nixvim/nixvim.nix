@@ -61,7 +61,7 @@ with config.lib.stylix.colors.withHashtag;
     ./plugins/utils/vimtex.nix
 
     # Development plugins for specific frameworks/langs
-    ./plugins/dev/godot.nix
+    # ./plugins/dev/godot.nix
 
   ];
   programs.nixvim = {
