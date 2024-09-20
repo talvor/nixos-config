@@ -10,25 +10,13 @@
 }: {
   # You can import other home-manager modules here
   imports = [
-    # If you want to use modules your own flake exports (from modules/home-manager):
-    # outputs.homeManagerModules.example
-
-    # Or modules exported from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModules.default
-
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
+    ./configs/zsh.nix
   ];
 
   nixpkgs = {
     # You can add overlays here
     overlays = [
-      # Add overlays your own flake exports (from overlays and pkgs dir):
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
-
-      # You can also add overlays exported from other flakes:
+      # If you want to use overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
 
       # Or define it inline, for example:
@@ -57,6 +45,33 @@
   programs.alacritty.enable = true;
   programs.nixvim.enable = true;
   programs.vscode.enable = true;
+
+  stylix.fonts = {
+    monospace = {
+      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
+      name = "JetBrainsMono Nerd Font Mono";
+    };
+    sansSerif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Sans";
+    };
+    serif = {
+      package = pkgs.dejavu_fonts;
+      name = "DejaVu Serif";
+    };
+  };
+  stylix.fonts.sizes = {
+    applications = 12;
+    terminal = 15;
+    desktop = 10;
+    popups = 10;
+  };
+  stylix.opacity = {
+    applications = 1.0;
+    terminal = 1.0;
+    desktop = 1.0;
+    popups = 1.0;
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
