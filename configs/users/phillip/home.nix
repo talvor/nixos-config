@@ -10,6 +10,7 @@
 }: {
   # You can import other home-manager modules here
   imports = [
+    ./configs/nixvim/nixvim.nix
     ./configs/tmux.nix
     ./configs/zsh.nix
   ];
@@ -44,7 +45,6 @@
   home.packages = with pkgs; [ lazygit ];
 
   programs.alacritty.enable = true;
-  programs.nixvim.enable = true;
   programs.vscode.enable = true;
 
   stylix.fonts = {
