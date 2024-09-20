@@ -10,6 +10,7 @@
 }: {
   # You can import other home-manager modules here
   imports = [
+    ./configs/tmux.nix
     ./configs/zsh.nix
   ];
 
