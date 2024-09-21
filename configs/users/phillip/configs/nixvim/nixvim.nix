@@ -17,18 +17,18 @@ with config.lib.stylix.colors.withHashtag;
     # UI Plugins
     ./plugins/ui/bufferline.nix
     ./plugins/ui/dashboard.nix
-    ./plugins/ui/fidget.nix
-    ./plugins/ui/indent-blankline.nix
-    ./plugins/ui/lspkind.nix
-    ./plugins/ui/lualine.nix
+    # ./plugins/ui/fidget.nix
+    # ./plugins/ui/indent-blankline.nix
+    # ./plugins/ui/lspkind.nix
+    # ./plugins/ui/lualine.nix
     ./plugins/ui/noice.nix
-    ./plugins/ui/nvim-colorizer.nix
-    ./plugins/ui/nvim-tree.nix
-    ./plugins/ui/nvim-ufo.nix
-    ./plugins/ui/rainbow-delimiters.nix
-    ./plugins/ui/statuscol.nix
+    # ./plugins/ui/nvim-colorizer.nix
+    ./plugins/ui/neo-tree.nix
+    # ./plugins/ui/nvim-ufo.nix
+    # ./plugins/ui/rainbow-delimiters.nix
+    # ./plugins/ui/statuscol.nix
     ./plugins/ui/telescope.nix
-    ./plugins/ui/trouble.nix
+    # ./plugins/ui/trouble.nix
     ./plugins/ui/which-key.nix
 
     # Editing plugins
@@ -42,23 +42,23 @@ with config.lib.stylix.colors.withHashtag;
     ./plugins/editing/lsp-format.nix
 
     # Version Control Plugins
-    ./plugins/git/gitsigns.nix
-    ./plugins/git/fugitive.nix
-    ./plugins/git/diffview.nix
+    # ./plugins/git/gitsigns.nix
+    # ./plugins/git/fugitive.nix
+    # ./plugins/git/diffview.nix
 
     # Utils
-    ./plugins/utils/dap.nix
-    ./plugins/utils/friendly-snippets.nix
-    ./plugins/utils/hop.nix
-    ./plugins/utils/lspsaga.nix
+    # ./plugins/utils/dap.nix
+    # ./plugins/utils/friendly-snippets.nix
+    # ./plugins/utils/hop.nix
+    # ./plugins/utils/lspsaga.nix
     ./plugins/utils/luasnip.nix
-    ./plugins/utils/markdown-preview.nix
-    ./plugins/utils/markdown-preview-css.nix
+    # ./plugins/utils/markdown-preview.nix
+    # ./plugins/utils/markdown-preview-css.nix
     ./plugins/utils/none-ls.nix
-    ./plugins/utils/project-nvim.nix
+    # ./plugins/utils/project-nvim.nix
     ./plugins/utils/treesitter.nix
-    ./plugins/utils/todo-comments.nix
-    ./plugins/utils/vimtex.nix
+    # ./plugins/utils/todo-comments.nix
+    # ./plugins/utils/vimtex.nix
 
     # Development plugins for specific frameworks/langs
     # ./plugins/dev/godot.nix
