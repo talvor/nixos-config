@@ -1,33 +1,32 @@
 {inputs, ...}: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-    # ./autocommands.nix
-    # ./completion.nix
-    # ./keymappings.nix
-    # ./options.nix
-    # ./plugins
-    # ./todo.nix
+    ./core/autocmds.nix
+    ./core/keymaps
+    ./core/options.nix
+    
+    # plugins
+    ./plugins
   ];
-
-  home.shellAliases.v = "nvim";
 
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
 
-    performance = {
-      combinePlugins = {
-        enable = true;
-        standalonePlugins = [
-        #   "hmts.nvim"
-        #   "nvim-treesitter"
-        ];
-      };
-      byteCompileLua.enable = true;
-    };
+    # Use <Space> as leader key
+    globals.mapleader = " ";
 
+    # Set 'vi' and 'vim' aliases to nixvim
     viAlias = true;
     vimAlias = true;
+
+    # Setup clipboard support
+    clipboard = {
+      # Use xsel as clipboard provider
+      providers.xsel.enable = true;
+
+      # Sync system clipboard
+      register = "unnamedplus";
+    };
 
     luaLoader.enable = true;
   };
