@@ -1,15 +1,10 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{ inputs, outputs, lib, config, pkgs, ... }: {
   # You can import other home-manager modules here
   imports = [
+    ./configs/nixvim
+    ./configs/stylix.nix
     ./configs/tmux.nix
     ./configs/zsh.nix
   ];
@@ -56,40 +51,6 @@
   };
   programs.kitty.enable = true;
   programs.vscode.enable = true;
-
-  stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
-    polarity = "dark";
-  };  
-
-  stylix.fonts = {
-    monospace = {
-      package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono" "FiraCode"];};
-      name = "FiraCode Nerd Font Mono";
-    };
-    sansSerif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Sans";
-    };
-    serif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Serif";
-    };
-  };
-  stylix.fonts.sizes = {
-    applications = 10;
-    terminal = 12;
-    desktop = 10;
-    popups = 10;
-  };
-  stylix.opacity = {
-    applications = 1.0;
-    terminal = 0.9;
-    desktop = 1.0;
-    popups = 1.0;
-  };
-  stylix.image = ../../../wallpapers/nixos-nord.png;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
