@@ -1,6 +1,7 @@
 {inputs, ...}: {
   imports = [
     ./alpha.nix
+    ./autoclose.nix
     ./bufferline.nix
     ./gitsigns.nix
     ./lazygit.nix
