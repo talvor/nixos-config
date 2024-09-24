@@ -1,5 +1,4 @@
-# homepage: https://github.com/nvim-neo-tree/neo-tree.nvim
-# nixvim doc: https://nix-community.github.io/nixvim/plugins/neo-tree/index.html
+{ icons, ... }:
 {
   programs.nixvim.plugins.neo-tree = {
     enable = true;
@@ -178,15 +177,15 @@
       # Sources to show and their labels
       sources = [
         {
-          displayName = " Files";
+          displayName = "${icons.FolderClosed} Files";
           source = "filesystem";
         }
         {
-          displayName = "󰈙 Bufs";
+          displayName = "${icons.DefaultFile} Bufs";
           source = "buffers";
         }
         {
-          displayName = "󰊢 Git";
+          displayName = "${icons.Git} Git";
           source = "git_status";
         }
       ];

@@ -1,5 +1,6 @@
 # homepage: https://github.com/folke/which-key.nvim
 # nixvim doc: https://nix-community.github.io/nixvim/plugins/which-key/index.html
+{ icons, ... }:
 
 {
   programs.nixvim.plugins.which-key = {
@@ -19,32 +20,32 @@
       {
         __unkeyed-1 = "<leader>b";
         group = "Buffers";
-        icon = "󰓩 ";
+        icon = "${icons.Tab} ";
       }
       {
         __unkeyed-1 = "<leader>sb";
         group = "Sort Buffers";
-        icon = "󰒺 ";
+        icon = "${icons.Sort} ";
       }
       {
         __unkeyed-1 = "<leader>d";
         group = "Debugger";
-        icon = " ";
+        icon = "${icons.Debugger} ";
       }
       {
         __unkeyed-1 = "<leader>f";
         group = "Find";
-        icon = " ";
+        icon = "${icons.Search} ";
       }
       {
         __unkeyed-1 = "<leader>g";
         group = "Git";
-        icon = "󰊢 ";
+        icon = "${icons.Git} ";
       }
       {
         __unkeyed-1 = "<leader>l";
         group = "Language Tools";
-        icon = " ";
+        icon = "${icons.ActiveLSP} ";
       }
       {
         __unkeyed-1 = "<leader>m";
@@ -54,30 +55,18 @@
       {
         __unkeyed-1 = "<leader>s";
         group = "Session";
-        icon = "󱂬 ";
+        icon = "${icons.Session} ";
       }
       {
         __unkeyed-1 = "<leader>t";
         group = "Terminal";
-        icon = " ";
+        icon = "${icons.Terminal} ";
       }
       {
         __unkeyed-1 = "<leader>u";
         group = "UI/UX";
-        icon = " ";
+        icon = "${icons.Window} ";
       }
     ];
-    # registrations = {
-    #   "<leader>b".name = "󰓩 Buffers";
-    #   "<leader>bs".name = "󰒺 Sort Buffers";
-    #   "<leader>d".name = " Debugger";
-    #   "<leader>f".name = " Find";
-    #   "<leader>g".name = "󰊢 Git";
-    #   "<leader>l".name = " Language Tools";
-    #   "<leader>m".name = " Markdown";
-    #   "<leader>s".name = "󱂬 Session";
-    #   "<leader>t".name = "";
-    #   "<leader>u".name = " UI/UX";
-    # };
   };
 }

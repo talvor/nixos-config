@@ -1,3 +1,5 @@
+{ icons, ... }:
+
 {
   programs.nixvim.plugins.notify = {
     enable = true;
@@ -10,11 +12,11 @@
 
     # https://github.com/AstroNvim/AstroNvim/blob/v4.7.7/lua/astronvim/plugins/notify.lua#L20-L26
     icons = {
-      debug = "";
-      error = "";
-      info = "󰋼";
-      trace = "󰌵";
-      warn = "";
+      debug = "${icons.Debugger}";
+      error = "${icons.DiagnosticError}";
+      info = "${icons.DiagnosticInfo}";
+      trace = "${icons.DiagnosticHint}";
+      warn = "${icons.DiagnosticWarn}";
     };
 
     # https://github.com/AstroNvim/AstroNvim/blob/v4.7.7/lua/astronvim/plugins/notify.lua#L29-L42

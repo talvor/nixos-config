@@ -39,6 +39,7 @@
     extraConfig = ''
       set -g default-terminal "tmux-256color"
       set -ag terminal-overrides ",xterm-256color:RGB"
+      set-option -a terminal-features '256:RGB'
 
       set-option -g prefix C-a
       unbind-key C-b

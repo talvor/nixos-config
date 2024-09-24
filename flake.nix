@@ -52,7 +52,11 @@
     homeConfigurations = {
       "phillip@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {
+          inherit inputs outputs;
+
+          icons = import ./utils/_icons.nix;
+        };
         modules = [
           stylix.homeManagerModules.stylix
           ./configs/users/phillip/home.nix

@@ -1,3 +1,5 @@
+{ icons, ... }:
+
 {
   programs.nixvim.plugins.alpha = let
     nixVim = [
@@ -51,13 +53,13 @@
           };
         in [
 
-          (mkButton "LDR s l" "" "  Last Session" "String")
-          (mkButton "LDR e" "" "  Explorer" "String")
-          (mkButton "LDR f o" "" "󰈙  Recents" "String")
-          (mkButton "LDR f f" "" "  Find File" "String")
-          (mkButton "LDR f g" "" "󰈭  Live Grep" "String")
-          (mkButton "LDR n" "" "  New File" "String")
-          (mkButton "q" "<CMD>qa<CR>" "󰒡 Quit Neovim" "String")
+          (mkButton "LDR s l" "" "${icons.Refresh}  Last Session" "String")
+          (mkButton "LDR e" "" "${icons.FolderOpen}  Explorer" "String")
+          (mkButton "LDR f o" "" "${icons.DefaultFile}  Recents" "String")
+          (mkButton "LDR f f" "" "${icons.Search}  Find File" "String")
+          (mkButton "LDR f g" "" "${icons.WordFile}  Live Grep" "String")
+          (mkButton "LDR n" "" "${icons.FileNew}  New File" "String")
+          (mkButton "q" "<CMD>qa<CR>" "${icons.Diagnostic} Quit Neovim" "String")
         ];
       }
       {
