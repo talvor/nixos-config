@@ -7,6 +7,7 @@
     ./gitsigns.nix
     ./lazygit.nix
     ./neo-tree.nix
+    ./notify.nix
     ./telescope.nix
     ./treesitter.nix
     ./which-key.nix
