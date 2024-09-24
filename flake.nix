@@ -2,11 +2,10 @@
   description = "Your new nix config";
 
   inputs = {
-    nixpkgs = { url = "github:NixOS/nixpkgs/nixos-24.05"; };
-    nixpkgs-unstable = { url = "github:nixos/nixpkgs/nixos-unstable"; };
+    nixpkgs = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager";
       inputs = { nixpkgs.follows = "nixpkgs"; };
     };
 
@@ -19,7 +18,7 @@
     };
 
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.05";
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
@@ -55,7 +54,6 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
-          nixvim.homeManagerModules.nixvim
           stylix.homeManagerModules.stylix
           ./configs/users/phillip/home.nix
         ];
