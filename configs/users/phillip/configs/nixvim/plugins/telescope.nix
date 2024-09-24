@@ -1,8 +1,11 @@
 # homepage: https://github.com/nvim-telescope/telescope.nvim
 # nixvim doc: https://nix-community.github.io/nixvim/plugins/telescope/index.html
-{ helpers, pkgs, ... }:
-
+{ config, lib, pkgs, ... }:
+let
+  helpers = config.lib.nixvim;
+in
 {
+
   programs.nixvim.plugins.telescope = {
     enable = true;
   };
