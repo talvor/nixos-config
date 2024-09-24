@@ -4,12 +4,20 @@
 {
   programs.nixvim.plugins.bufferline = {
     enable = true;
-    # settings = {
-    #   options = {
-    #     numbers = "none";
-    #     diagnostics = "nvim_lsp";
-    #     separator_style = "slope";
-    #   };
-    # };
+    settings = {
+      options = {
+        numbers = "none";
+        diagnostics = "nvim_lsp";
+        offsets = [
+          {
+            filetype = "neo-tree";
+            text = "File Explorer";
+            text_align = "center";
+            highlight = "Directory";
+          }
+        ];
+        separator_style = "slope";
+      };
+    };
   };
 }
