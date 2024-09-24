@@ -3,6 +3,7 @@
     ./alpha.nix
     ./autoclose.nix
     ./bufferline.nix
+    ./comment.nix
     ./gitsigns.nix
     ./lazygit.nix
     ./neo-tree.nix
