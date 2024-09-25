@@ -8,7 +8,7 @@
 
     action.__raw = ''
       function()
-        --require("astrocore.buffer").close()
+        require('bufdelete').bufdelete(0)
       end
     '';
   }
@@ -19,7 +19,7 @@
 
     action.__raw = ''
       function()
-        --require("astrocore.buffer").close(0, true)
+        require('bufdelete').bufdelete(0, true)
       end
     '';
   }
@@ -27,45 +27,25 @@
     mode = "n";
     key = "]b";
     options.desc = "Next buffer in tabline";
-
-    action.__raw = ''
-      function()
-        --require("astrocore.buffer").nav(vim.v.count1)
-      end
-    '';
+    action = "<Cmd>BufferLineCycleNext<CR>";
   }
   {
     mode = "n";
     key = "[b";
     options.desc = "Previous buffer in tabline";
-
-    action.__raw = ''
-      function()
-        --require("astrocore.buffer").nav(-vim.v.count1)
-      end
-    '';
+    action = "<Cmd>BufferLineCyclePrev<CR>";
   }
   {
     mode = "n";
     key = ">b";
     options.desc = "Move buffer tab right";
-
-    action.__raw = ''
-      function()
-        --require("astrocore.buffer").move(vim.v.count1)
-      end
-    '';
+    action = "<Cmd>BufferLineMoveNext<CR>";
   }
   {
     mode = "n";
     key = "<b";
     options.desc = "Move buffer tab left";
-
-    action.__raw = ''
-      function()
-        --require("astrocore.buffer").move(-vim.v.count1)
-      end
-    '';
+    action = "<Cmd>BufferLineMovePrev<CR>";
   }
   {
     mode = "n";
@@ -126,35 +106,25 @@
     mode = "n";
     key = "<Leader>bse";
     options.desc = "By extension";
-
-    action.__raw = ''
-      function()
-        --require("astrocore.buffer").sort "extension"
-      end
-    '';
+    action = "<Cmd>BufferLineSortByExtension<CR>";
   }
   {
     mode = "n";
     key = "<Leader>bsr";
     options.desc = "By relative path";
-
-    action.__raw = ''
-      function()
-        --require("astrocore.buffer").sort "unique_path"
-      end
-    '';
+    action = "<Cmd>BufferLineSortByDirectory<CR>";
   }
-  {
-    mode = "n";
-    key = "<Leader>bsp";
-    options.desc = "By full path";
-
-    action.__raw = ''
-      function()
-        --require("astrocore.buffer").sort "full_path"
-      end
-    '';
-  }
+  # {
+  #   mode = "n";
+  #   key = "<Leader>bsp";
+  #   options.desc = "By full path";
+  #
+  #   action.__raw = ''
+  #     function()
+  #       --require("astrocore.buffer").sort "full_path"
+  #     end
+  #   '';
+  # }
   {
     mode = "n";
     key = "<Leader>bsi";
@@ -162,19 +132,19 @@
 
     action.__raw = ''
       function()
-        --require("astrocore.buffer").sort "bufnr"
+        require("bufferline").sort_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)
       end
     '';
   }
-  {
-    mode = "n";
-    key = "<Leader>bsm";
-    options.desc = "By modification";
-
-    action.__raw = ''
-      function()
-        --require("astrocore.buffer").sort "modified"
-      end
-    '';
-  }
+  # {
+  #   mode = "n";
+  #   key = "<Leader>bsm";
+  #   options.desc = "By modification";
+  #
+  #   action.__raw = ''
+  #     function()
+  #       --require("astrocore.buffer").sort "modified"
+  #     end
+  #   '';
+  # }
 ]
