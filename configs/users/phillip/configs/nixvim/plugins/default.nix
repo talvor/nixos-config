@@ -4,6 +4,7 @@
     ./autoclose.nix
     ./bufferline.nix
     ./comment.nix
+    ./dressing.nix
     ./gitsigns.nix
     ./indent-blankline.nix
     ./lazygit.nix
