@@ -6,6 +6,7 @@
     ./comment.nix
     ./dressing.nix
     ./gitsigns.nix
+    ./illuminate.nix
     ./indent-blankline.nix
     ./lazygit.nix
     ./lsp.nix
