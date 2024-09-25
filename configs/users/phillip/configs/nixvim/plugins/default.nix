@@ -8,6 +8,7 @@
     ./indent-blankline.nix
     ./lazygit.nix
     ./lsp.nix
+    ./mini.nix
     ./neo-tree.nix
     ./noice.nix
     ./notify.nix
