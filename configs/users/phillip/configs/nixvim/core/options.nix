@@ -1,6 +1,4 @@
-# Neovim options
-# Use :options to get the list of all options
-# Use :h <option> to load help for given <option>
+{ icons, ... }:
 {
   programs.nixvim.opts = {
     # Don't stop backspace at insert
@@ -35,10 +33,15 @@
     expandtab = true;
 
     # Disable `~` on nonexistent lines
-    fillchars = { eob = " "; };
+    fillchars = { 
+      eob = " ";
+      foldopen = icons.FoldOpened;
+      foldsep = icons.FoldSeparator;
+      foldclose = icons.FoldClosed;
+    };
 
     # Enable fold with all code unfolded
-    foldcolumn = "1";
+    foldcolumn = "5";
     foldenable = true;
     foldlevel = 99;
     foldlevelstart = 99;

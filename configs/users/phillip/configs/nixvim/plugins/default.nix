@@ -11,6 +11,7 @@
     ./neo-tree.nix
     ./noice.nix
     ./notify.nix
+    ./nvim-ufo.nix
     ./telescope.nix
     ./treesitter.nix
     ./which-key.nix
