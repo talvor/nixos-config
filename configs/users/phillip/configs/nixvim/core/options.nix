@@ -41,7 +41,7 @@
     };
 
     # Enable fold with all code unfolded
-    foldcolumn = "5";
+    foldcolumn = "auto:9";
     foldenable = true;
     foldlevel = 99;
     foldlevelstart = 99;
