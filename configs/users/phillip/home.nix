@@ -49,7 +49,6 @@
       };
     };
   };
-  programs.kitty.enable = true;
   programs.vscode.enable = true;
 
   # Nicely reload system units when changing configs
