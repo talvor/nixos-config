@@ -5,6 +5,7 @@
     ./bufferline.nix
     ./comment.nix
     ./gitsigns.nix
+    ./indent-blankline.nix
     ./lazygit.nix
     ./lsp.nix
     ./neo-tree.nix
