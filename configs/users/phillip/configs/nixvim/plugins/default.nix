@@ -6,6 +6,7 @@
     ./comment.nix
     ./gitsigns.nix
     ./lazygit.nix
+    ./lsp.nix
     ./neo-tree.nix
     ./noice.nix
     ./notify.nix
