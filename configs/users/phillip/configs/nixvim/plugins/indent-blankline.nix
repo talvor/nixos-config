@@ -1,5 +1,4 @@
 {
-  programs.nixvim.colorschemes.catppuccin.settings.integrations.indent_blankline = true;
 
   programs.nixvim.plugins.indent-blankline = {
     enable = true;

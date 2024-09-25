@@ -108,7 +108,6 @@
   };
 
   programs.nixvim = {
-    colorschemes.catppuccin.settings.integrations.native_lsp.enabled = true;
     extraPackages = [ pkgs.go ];
   };
 }

@@ -1,7 +1,7 @@
 { pkgs, config, ... }: {
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     polarity = "dark";
 
     cursor = {
@@ -13,7 +13,7 @@
       monospace = {
         package =
           pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; };
-        name = "FiraCode Nerd Font Mono";
+        name = "JetBrainsMono Nerd Font Mono";
       };
       sansSerif = {
         package = pkgs.dejavu_fonts;

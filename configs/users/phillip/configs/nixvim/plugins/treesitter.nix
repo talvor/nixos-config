@@ -19,10 +19,6 @@
     };
   };
 
-  # Enable catppuccin colors
-   # https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/treesitter.lua
-  programs.nixvim.colorschemes.catppuccin.settings.integrations.treesitter = true;
-
   programs.nixvim.keymaps = [
     {
       mode = [ "n" "x" "o" ];

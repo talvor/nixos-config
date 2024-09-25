@@ -13,6 +13,8 @@
     enable = true;
     defaultEditor = true;
 
+    colorschemes.nord.enable = true;
+
     # Use <Space> as leader key
     globals.mapleader = " ";
 

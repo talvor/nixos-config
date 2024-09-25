@@ -13,10 +13,6 @@ in
   # Needed for live grep
   programs.nixvim.extraPackages = [ pkgs.ripgrep ];
 
-  # Enable catppuccin colors
-  # https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/telescope.lua
-  programs.nixvim.colorschemes.catppuccin.settings.integrations.telescope.enabled = true;
-
   # Set custom behavior for dropdown theme:
   # - use 80% of window width
   # - use all window height
