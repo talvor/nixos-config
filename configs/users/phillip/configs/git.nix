@@ -5,7 +5,7 @@
     userEmail = "talvor@me.com";
     signing = {
       signByDefault = true;
-      key = "D3DE8661D298E058";
+      key = "D9932AF5DD184554";
     };
   };
 }
