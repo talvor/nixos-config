@@ -53,7 +53,6 @@
           };
         in [
 
-          (mkButton "LDR s l" "" "${icons.Refresh}  Last Session" "String")
           (mkButton "LDR e" "" "${icons.FolderOpen}  Explorer" "String")
           (mkButton "LDR f o" "" "${icons.DefaultFile}  Recents" "String")
           (mkButton "LDR f f" "" "${icons.Search}  Find File" "String")

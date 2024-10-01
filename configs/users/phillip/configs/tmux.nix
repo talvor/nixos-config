@@ -10,7 +10,7 @@
     plugins = with pkgs; [
       tmuxPlugins.sensible
       tmuxPlugins.better-mouse-mode
-      tmuxPlugins.nord
+      tmuxPlugins.gruvbox
     ];
 
     extraConfig = ''
