@@ -15,6 +15,7 @@
     ../common/services.nix
     ../common/theme.nix
     ../common/time.nix
+    ../common/virtualisation.nix
     ../common/yubikey-gpg.nix
 
     ../users/phillip.nix
