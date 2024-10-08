@@ -14,6 +14,8 @@
     hypridle
     hyprpaper
 
+    kitty
+
     # inputs.wezterm.packages.${pkgs.system}.default
     # cool-retro-term
 
