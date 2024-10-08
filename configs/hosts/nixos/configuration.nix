@@ -1,13 +1,4 @@
-# This is your system's configuration file.
-# Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{ ... }: {
   imports = [
     ./hardware-configuration.nix
 
@@ -16,6 +7,7 @@
     ../common/bootloader.nix
     ../common/gc.nix
     ../common/gnome.nix
+    ../common/hyprland.nix
     ../common/internationalisation.nix
     ../common/networking.nix
     ../common/nix-settings.nix
