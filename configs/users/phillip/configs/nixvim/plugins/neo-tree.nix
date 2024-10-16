@@ -143,15 +143,15 @@
 
     defaultComponentConfigs = {
       gitStatus.symbols = {
-        added = "";
-        conflict = "";
-        deleted = "";
-        ignored = "◌";
-        modified = "";
-        renamed = "➜";
-        staged = "✓";
-        unstaged = "✗";
-        untracked = "★";
+        added = icons.GitAdd;
+        conflict = icons.GitConflict;
+        deleted = icons.GitDelete;
+        ignored = icons.GitIgnored;
+        modified = icons.GitChange;
+        renamed = icons.GitRenamed;
+        staged = icons.GitStaged;
+        unstaged = icons.GitUnstaged;
+        untracked = icons.GitUntracked;
       };
     };
 

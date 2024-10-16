@@ -12,12 +12,12 @@
 
       # Use same icon for all signs (only color matters)
       signs = {
-        add.text = "${icons.GitSign}";
-        change.text = "${icons.GitSign}";
-        changedelete.text = "${icons.GitSign}";
-        delete.text = "${icons.GitSign}";
-        topdelete.text = "${icons.GitSign}";
-        untracked.text = "${icons.GitSign}";
+        add.text = icons.GitSign;
+        change.text = icons.GitSign;
+        changedelete.text = icons.GitSign;
+        delete.text = icons.GitSign;
+        topdelete.text = icons.GitSign;
+        untracked.text = icons.GitSign;
       };
     };
   };
